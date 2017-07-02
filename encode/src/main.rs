@@ -106,6 +106,6 @@ fn main() {
     println!("Image saved as: {}", save_to_file_name);
     let decode_password = format!("{}*{}*{}*{}", key, noise_start_x, noise_start_y, msg_length);
     println!("To decode: {}", decode_password);
-	
-	println!("---------------- END ----------------");
+    
+    println!("---------------- END ----------------");
 }
