@@ -1,2 +1,3 @@
-# rust-steganography
-A hobby project to learn the Rust language: encodes hidden messages in PNG images
+## Steganography using the Rust language
+
+A hobby project to learn the Rust language. 
