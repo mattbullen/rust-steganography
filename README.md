@@ -16,7 +16,7 @@ The PNG itself:
 
 To decode, much the same:
 
-```[password] [PNG's file name]```
+```[decode password] [PNG's file name]```
 
 ![decode screenshot](https://user-images.githubusercontent.com/7276226/27767131-387e0394-5ea1-11e7-8f6a-230a772fdb33.png)
 
