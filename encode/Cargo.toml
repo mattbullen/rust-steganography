@@ -1,0 +1,8 @@
+[package]
+name = "encode"
+version = "0.1.0"
+authors = ["Matthew Bullen"]
+
+[dependencies]
+image = "*"
+rand = "*"
