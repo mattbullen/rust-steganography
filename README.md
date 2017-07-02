@@ -1,6 +1,6 @@
 ## Steganography using the Rust language
 
-A hobby project to learn the Rust language. The first part encodes a message inside the color channels of a PNG image's pixels; the second part decodes the message from the image.
+A hobby project to learn the [Rust](https://doc.rust-lang.org/book/second-edition/) language. The first part encodes a message inside the color channels of a PNG image's pixels; the second part decodes the message from the image.
 
 To encode a message, the terminal command needs these parameters:
 
