@@ -20,4 +20,4 @@ To decode, much the same:
 
 ![decode screenshot](https://user-images.githubusercontent.com/7276226/27767131-387e0394-5ea1-11e7-8f6a-230a772fdb33.png)
 
-This is essentially security through obscurity, since you need to know the X and Y coordinates for where the sequence of significant pixels begins, along with the message length, but nothing prevents anyone from trying every possible combination of pixel channels to (eventually) find the message values.
+This is essentially security through obscurity, since you need to know the X and Y coordinates for where the sequence of significant pixels begins, along with the message length. There's also an offset mechanism and some basic channel cycling - but nothing prevents anyone from trying every possible combination of pixel channels to (eventually) find the message values. 
