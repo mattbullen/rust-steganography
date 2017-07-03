@@ -14,7 +14,7 @@ Encoding has two steps. The first step encodes the message characters in their n
 
 ![raw_encoded_mask](https://user-images.githubusercontent.com/7276226/27777068-7cd3deba-5f64-11e7-98a9-e7033940eeca.png)
 
-The second step converts the numeric values of every pixel in the intermediate image into binary, splits the binary values into individual digits, then applies them to a "mask" file, or an ordinary-looking image. If a binary digit is 0, then one of the channels of the corresponding mask pixel is adjusted (if needed) to hold an even value. If 1, then odd. The visual changes to the image are very slight and usually imperceptible in images with a large variety of bold colors. For example:
+The second step converts the channel values of every pixel in the intermediate image into binary, splits the binary values into individual digits, then applies them to a "mask" file, or an ordinary-looking image. If a binary digit is 0, then one of the channels of the corresponding mask pixel is adjusted (if needed) to hold an even value. If 1, then odd. The visual changes to the image are very slight and usually imperceptible in images with a large variety of bold colors. For example:
 
 ![encoded_mask](https://user-images.githubusercontent.com/7276226/27777071-7ffedc16-5f64-11e7-95fe-cbf8a1f252b1.png)
 
