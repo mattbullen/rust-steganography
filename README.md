@@ -4,7 +4,7 @@ A hobby project to learn the [Rust](https://doc.rust-lang.org/book/second-editio
 
 To encode an image, build and run with:
 
-```[height] [width] [decode password] [.txt file with the message] [file name for the PNG] [toggle to save the intermediate image]```
+```[height] [width] [decode password] [.txt file with the message] [file name for the PNG]```
 
 ![encode](https://user-images.githubusercontent.com/7276226/27777062-738bb738-5f64-11e7-8ccd-ae297faa4dfa.png)
 
