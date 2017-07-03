@@ -8,7 +8,7 @@ use std::path::Path;
 
 fn main() {
    
-    println!("\n\n------------------------------------------------------------");
+    println!("\n------------------------------------------------------------");
     
     // Capture the command line arguments.
     let args: Vec<String> = env::args().collect();

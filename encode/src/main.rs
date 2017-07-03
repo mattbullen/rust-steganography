@@ -13,17 +13,16 @@ use std::path::Path;
 
 fn main() {
    
-    println!("\n\n------------------------------------------------------------");
+    println!("\n------------------------------------------------------------");
     
-    // Capture the command line arguments.
     let args: Vec<String> = env::args().collect();
     // println!("Parameters supplied: {:?}", args);
-    let key = &args[3];
-    println!("Password: {}", key);
     let width = args[1].parse::<u32>().unwrap();
     println!("Encoding image width: {}px", width);
     let height = args[2].parse::<u32>().unwrap();
     println!("Encoding image height: {}px", height);
+	let key = &args[3];
+    println!("Password: {}", key);
     let text_file_name = &args[4];
     println!("Message source: {}", text_file_name);
     let mask_file = &args[5];
@@ -132,9 +131,6 @@ fn main() {
         let ref bin = bin_values[i];
         let padded = format!("00000000{}", bin);
         let iter_bin: Vec<char> = padded.chars().rev().take(8).collect();
-        
-        //println!("{} {:?}", padded, iter_bin);
-        
         padded_bin.push(iter_bin[7]);
         padded_bin.push(iter_bin[6]);
         padded_bin.push(iter_bin[5]);
@@ -251,37 +247,3 @@ fn main() {
     
     println!("------------------------------------------------------------");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
