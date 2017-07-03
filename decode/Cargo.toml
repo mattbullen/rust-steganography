@@ -5,3 +5,4 @@ authors = ["Matthew Bullen"]
 
 [dependencies]
 image = "*"
+num = "*"

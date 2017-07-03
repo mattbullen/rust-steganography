@@ -5,4 +5,5 @@ authors = ["Matthew Bullen"]
 
 [dependencies]
 image = "*"
+num = "*"
 rand = "*"
