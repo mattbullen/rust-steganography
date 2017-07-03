@@ -1,23 +1,25 @@
 ## Steganography using the Rust language
 
-A hobby project to learn the [Rust](https://doc.rust-lang.org/book/second-edition/) language. The first part encodes a message inside the color channels of a PNG image's pixels; the second part decodes the message from the image.
+A hobby project to learn the [Rust](https://doc.rust-lang.org/book/second-edition/) language. This project encodes a message inside the color / alpha channels of a PNG image's pixels, then later decodes the message to a terminal window.
 
-To encode a message, the terminal command needs these parameters:
+To encode an image, build and run with:
 
-```[height] [width] [decode password] [.txt file with the message] [file name for the PNG]```
+```[height] [width] [decode password] [.txt file with the message] [file name for the PNG] [toggle to save the intermediate image]```
 
-![encode screenshot](https://user-images.githubusercontent.com/7276226/27767127-0adc2470-5ea1-11e7-819b-842b0629572d.png)
+![encode](https://user-images.githubusercontent.com/7276226/27777062-738bb738-5f64-11e7-8ccd-ae297faa4dfa.png)
 
 Be sure to save the final password from the terminal. This is needed to decode the message.
 
-The PNG itself:
+Encoding has two steps. The first step encodes the message characters in their numeric form inside the color/alpha channels of an intermediate PNG that has been filled with random pixel noise. The noise is there to make it harder to determine which pixels and which channels hold the message information. The intermediate PNG:
 
-![encoded](https://user-images.githubusercontent.com/7276226/27767128-2230ff10-5ea1-11e7-9fbb-981989b9d7f1.png)
+![raw_encoded_mask](https://user-images.githubusercontent.com/7276226/27777068-7cd3deba-5f64-11e7-98a9-e7033940eeca.png)
+
+The second step converts the numeric values of every pixel in the intermediate image into binary, splits the binary values into individual digits, then applies them to a "mask" file, or an ordinary-looking image. If a binary digit is 0, then one of the color channels of the corresponding mask pixel is adjusted (if needed) to hold an even value. If 1, then odd. The visual changes to the image are very slight and usually imperceptible in images with a large variety of bold colors. For example:
+
+![encoded_mask](https://user-images.githubusercontent.com/7276226/27777071-7ffedc16-5f64-11e7-95fe-cbf8a1f252b1.png)
 
 To decode, much the same:
 
 ```[decode password] [PNG's file name]```
 
-![decode screenshot](https://user-images.githubusercontent.com/7276226/27767131-387e0394-5ea1-11e7-8f6a-230a772fdb33.png)
-
-This is essentially security through obscurity, since you need to know the X and Y coordinates for where the sequence of significant pixels begins, along with the message length. There's also an offset mechanism and some basic channel cycling - but nothing prevents anyone from trying every possible combination of pixels and channels to (eventually) find the message values. 
+![decode](https://user-images.githubusercontent.com/7276226/27777065-76441664-5f64-11e7-9604-3b8ecbe0ceb9.png)
